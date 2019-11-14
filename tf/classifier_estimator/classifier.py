@@ -63,7 +63,6 @@ classifier = tf.estimator.DNNClassifier(
     # The model must choose between 3 classes.
     n_classes=3)
 
-
 # Train the Model.
 classifier.train(
     input_fn=lambda: input_fn(train, train_y, training=True),
