@@ -28,3 +28,11 @@ for elem in dataset:
 
 ru = tf.random.uniform([4, 10])
 print(ru)
+
+
+TFRecords 
+
+# is a variety of file formats so that you can process large datasets that do not fit in memory. For example, the TFRecord file format is a simple record-oriented binary format that many TensorFlow applications use for training data. The tf.data.TFRecordDataset class enables you to stream over the contents of one or more TFRecord files as part of an input pipeline.
+
+
+
