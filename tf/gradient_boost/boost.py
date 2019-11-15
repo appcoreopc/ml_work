@@ -86,7 +86,19 @@ clear_output()
 print(pd.Series(result))
 
 
-print("using boost ")
+
+bte = tf.estimator.BoostedTreesEstimator(feature_columns)
+bte.train(train_input_fn, max_steps=100)
+
+result = linear_est.evaluate(eval_input_fn)
+
+print(pd.Series(result))
+
+
+
+
+
+print("using BoostedTreesClassifier")
 # Since data fits into memory, use entire dataset per layer. It will be faster.
 # Above one batch is defined as the entire dataset.
 n_batches = 1
